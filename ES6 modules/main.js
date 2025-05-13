@@ -1,5 +1,7 @@
-const http = require('node:http');
+// const http = require('node:http');
 // Compare this snippet from firstNodeServer/myServer.js:
+
+import http from "http";
 const hostname = '127.0.0.1';
 const port = 3000;
 
