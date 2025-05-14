@@ -28,6 +28,5 @@ server.listen(port, hostname, () => {
 
   //default export value printed
   // console.log(obj);
-  console.log(anyname);
-  
+  console.log(`Default export value : ${anyname.x}, ${anyname.y}`);
 });

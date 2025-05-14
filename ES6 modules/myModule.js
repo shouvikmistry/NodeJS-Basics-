@@ -7,8 +7,9 @@ export const e = 5
 export const f = 6
 
 //Default Export
-let obj; //object vaiable shouble initialized before exporting
-export default obj = {
+//object variable should be initialized before exporting
+const obj = {
     x : 5,
     y : 7
 }
+export default obj;
