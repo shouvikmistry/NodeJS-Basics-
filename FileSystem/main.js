@@ -1,6 +1,5 @@
 const fs = require('fs');
-const { start } = require('repl');
-
+const path = require('path');
 console.log('Starting the file system operations...');
 // Create a new directory
 console.log("starting");
@@ -17,15 +16,6 @@ fs.writeFile('shouvik2.txt', 'Hello World!2',()=>{
         }
         console.log(data.toString());
     });
-});
-console.log("append program starting");
-
-fs.appendFile("shouvik.txt", "appended data", (e) => {
-    if (e) {
-        console.log(e);
-    } else {
-        console.log("Data appended successfully.");
-    }
 });
 console.log("ending");
 
