@@ -26,12 +26,17 @@ app.get('/blog/:slug', (req, res) => {
     console.log(req.params);// will output the slug :java anything
     console.log(req.query);// will output the query string { mode: 'dark' }
   res.send(`Introduction to blog post ${req.params.slug}`)
+  
   //params is an object containing properties mapped to the named route “parameters” (i.e. :slug) its comes from the URL
 })
 //-------------------------------------------------------
 //static files
 app.use(express.static('public'))
 
+app.get("/api", (req, res) => {
+  res.json(
+    { name: 'John Doe', age: 30 })//this will send the response as a json object
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
