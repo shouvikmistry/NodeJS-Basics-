@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing post request</title>
+</head>
+<body>
+    <!-- This is a test page for testing post request
+    for manual testing of post request
+    but it is not standard to use post request in this way
+    
+    this is where Postman comes in
+    Postman is a tool for testing APIs
+    -->
+    <script>
+        async function testPost() {
+            let a = await fetch("/", {method: "POST"});
+            let b = await a.text();
+            console.log(b);
+        }
+        // testPost();
+
+        async function testPut() {
+            let a = await fetch("/", {method: "PUT"});
+            let b = await a.text();
+            console.log(b);
+        }
+        testPut();
+    </script>
+</body>
+</html>
