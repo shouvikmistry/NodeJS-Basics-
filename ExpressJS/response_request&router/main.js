@@ -63,6 +63,22 @@ app.get("/api", (req, res) => {
   res.json({ name: 'John Doe', age: 30 })//this will send the response as a json object
   console.log('hey its a json request');//this will be printed in the server console
 })
+
+//-----------------------------------------
+//routing for organizing the code
+const blog = require('./routes/blog')//this will import the birds.js file in the same folder
+
+// ...
+
+app.use('/blog', blog)
+const shop = require('./routes/shop')//this will import the birds.js file in the same folder
+// ...
+
+app.use('/shop', shop)
+
+//-----------------------------------------
+
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
