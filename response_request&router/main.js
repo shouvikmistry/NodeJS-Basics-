@@ -65,19 +65,28 @@ app.get("/api", (req, res) => {
 })
 
 //-----------------------------------------
+//#######################################
 //routing for organizing the code
+//#######################################
+
 const blog = require('./routes/blog')//this will import the birds.js file in the same folder
-
 // ...
-
 app.use('/blog', blog)
+
+
 const shop = require('./routes/shop')//this will import the birds.js file in the same folder
 // ...
-
 app.use('/shop', shop)
 
 //-----------------------------------------
 
+//-----------------------------------------
+// #########################################
+//  Response Methods
+// #########################################
+const responseMethods = require('./routes/methods')
+app.use('/methods', responseMethods)
+//-----------------------------------------
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
